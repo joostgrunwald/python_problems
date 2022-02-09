@@ -203,3 +203,29 @@ if (stock_in_seven_weeks < 42524):
     print("You will probably not be able to get the order done in time.")
 else:
     print("You will probably get the order done in time, expected surplus is: " + str(stock_in_seven_weeks - 42524))
+    
+
+# ? Lets say that there is an order in week 44 of the year for 106000 stones, will they make the order?
+# ? If they will make the order, show the expected surplus, if they will not make the order, show how many stones they fall short.
+
+# * hint: use the current stock, the amount of weeks left and the average, to calculate the stock at the given time
+
+dcer_weeks = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+dcer_production = [1234, 987, 1204, 2343, 23432, 564, 7556, 756, 1024, 422, 458, 420, 888, 1242, 5325, 235] 
+dcer_orders = [0, 0, 0, 0, 3152, 0, 0, 4542, 0, 0, 14245, 0, 0, 0, 142, 0]
+
+total_production = 0
+for single_production in dcer_production: 
+    total_production = total_production + single_production
+
+average = total_production / 16
+current_stock = 26009
+
+stock_produced_later = average * 28 
+stock_in_weeks_to_go = current_stock + stock_produced_later
+
+if (stock_in_weeks_to_go < 112000):
+    print("You will probably not be able to get the order done in time." + str(112000 - stock_in_weeks_to_go ))
+else:
+    print("You will probably get the order done in time, expected surplus is: " + str(stock_in_weeks_to_go - 112000))
+    
