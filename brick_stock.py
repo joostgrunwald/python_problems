@@ -307,7 +307,22 @@ for thesenames in allnums:
 bools = [True, False, False, False, False, True, True, False, True, True, True]
 
 # print every element of this list
+for singlebool in bools: 
+    print(singlebool)
+    
+numerics = [3, 4, 5, 6, 7, 8, 9, 222, 10, 11, 333]
 
+#adjust: we only want to print elements bigger then 20
+#hint use an if
+
+# we only print numbers that are smaller then 100 when multiplied by 12
+# hint, first multiply then check if smaller
+
+for nummer in numerics: 
+    nummer = nummer * 12
+    if nummer < 100: 
+        print(nummer)
+    
 # for loop part 1
 # find the first name
 # Sam1 found
@@ -316,7 +331,38 @@ bools = [True, False, False, False, False, True, True, False, True, True, True]
 # Found sam2 
 # print sam2
 
-names
 # Coding from documentation
 
+# Ethereum
+# lets predict wether ethereum goes up or down
+# 
+
+
 # Linear regression
+
+# Step 1: Import packages
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+
+# we are a supermarket
+# we are going to save how many products are sold each day
+# we are also going to measure how many people there are each day
+
+# x = amount of people in store
+x = [100,  200, 300, 100, 200, 300, 100]
+
+# y = amount of products stored
+y = [155,  244, 444, 139, 276, 310, 175]
+
+# intermediate steps
+x = np.array(x)
+y = np.array(y)
+x_t = x.transpose()
+model = LinearRegression().fit(x_t, y)
+
+# how good is our model?
+r_sq = model.score(x_t, y)
+
+# predict using our model 
+y_pred = model.predict(500)
