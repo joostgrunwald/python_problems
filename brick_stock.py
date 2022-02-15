@@ -228,4 +228,95 @@ if (stock_in_weeks_to_go < 112000):
     print("You will probably not be able to get the order done in time." + str(112000 - stock_in_weeks_to_go ))
 else:
     print("You will probably get the order done in time, expected surplus is: " + str(stock_in_weeks_to_go - 112000))
+
+# FIRST: some more simple exercises and redoing
+# THEN: some cool linear regression (super easy!)
+
+# VARIABLES
+# integer, string, double, boolean
+
+# ARITHMETHICS
+thirty = 30
+fourty = 40
+
+#inside a variable named seventy, add thirthy and fourty together
+
+seventy = thirty + fourty
+
+#inside a variable named output, do 7 times thirty + 8 times fourty, then substract 15
+
+output = (7 * 30 + 8 * 40 - 15) 
+
+# STRINGS
+# make a string with as text "hello world", call it however you like
+
+string = "Hello World"
+
+# Add the text " 2022" to the above string using arithmetics
+
+text = string + " 2022"
+
+# replace the Hello with goodbye in the above string
+
+replacement = text.replace("Hello", "Goodbye")
+
+# showcase this to the user
+
+print (replacement)
+
+# LISTS AND LOOPS 
+
+# create a list containing three names of your choice
+
+names = ["Sam1", "Sam2", "Sam3"]
+
+# print the second element of the list
+element = names[1]
+print (element)
+
+for name in names:
+    print(name + " works")
     
+elem_one = names[0]
+print(elem_one)
+elem_two = names[1]
+print(elem_two)
+elem_three = names[2]
+print(elem_three)
+
+numbers = [123, 235, 3435, 3453, 705, 755, 744, 345, 785]
+
+# Now the company wants to know how much they earned in total
+# use a for loop to calculate the total earnings of the company
+
+output = 0
+for profit in numbers:
+    output = output + profit
+print(output )
+
+babynames = ["chleo", "patrick", "eric", "pieter"]
+
+for name in babynames:
+    print(name)
+    
+allnums = [-3, -2, -1, 0, 1, 2, 3]
+
+for thesenames in allnums: 
+    print(thesenames)
+
+bools = [True, False, False, False, False, True, True, False, True, True, True]
+
+# print every element of this list
+
+# for loop part 1
+# find the first name
+# Sam1 found
+# print Sam1
+# Sam1 found is there more?
+# Found sam2 
+# print sam2
+
+names
+# Coding from documentation
+
+# Linear regression
